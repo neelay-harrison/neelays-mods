@@ -1,0 +1,9 @@
+{
+  "name": "neelays-ferrous-metallurgy",
+  "version": "0.0.1",
+  "title": "Neelay's Ferrous Metallurgy",
+  "author": "neelay-harrison",
+  "factorio_version": "1.1",
+  "dependencies": ["base >= 1.1"],
+  "description": "Changes how iron and steel are produced"
+}
