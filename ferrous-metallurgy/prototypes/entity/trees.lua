@@ -10,3 +10,5 @@ end
 
 -- increase stack size to handle picking up all this wood
 data.raw.item["wood"].stack_size = 200
+data.raw.item["wood"].fuel_value = "1MJ"
+data.raw.item["wood"].fuel_category = "wood"
