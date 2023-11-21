@@ -4,6 +4,8 @@ local bloomery_entity = table.deepcopy(data.raw["furnace"]["stone-furnace"])
 
 local stone_kiln_entity_name = "stone-kiln"
 local bloomery_entity_name = "bloomery"
+
+
 -- local stone_kiln_icon_path = "__neelays-ferrous-metallurgy__/ignore/stone-charcoal-kiln.png"
 
 -- update with custom information
@@ -19,7 +21,7 @@ stone_kiln_entity.energy_source.fuel_category = "wood"
 stone_kiln_entity.crafting_categories = { "kiln" }
 stone_kiln_entity.type = "assembling-machine"
 
--- bloomery
+-- bloomery entity
 bloomery_entity.name = bloomery_entity_name
 bloomery_entity.minable = {
     mining_time = 0.2,
@@ -27,10 +29,21 @@ bloomery_entity.minable = {
 }
 bloomery_entity.fast_replaceable_group = nil
 bloomery_entity.next_upgrade = nil
-bloomery_entity.energy_usage = "5MW"
+bloomery_entity.energy_usage = "2.5MW"
 bloomery_entity.energy_source.fuel_category = "charcoal"
 bloomery_entity.crafting_categories = { "bloomery" }
 bloomery_entity.type = "assembling-machine"
+bloomery_entity.icon = "__neelays-ferrous-metallurgy__/graphics/icons/bloomery.png"
+bloomery_entity.animation = {
+    filename = "__neelays-ferrous-metallurgy__/graphics/entity/bloomery.png",
+    width = 64,
+    height = 64,
+    frame_count = 1,
+}
+bloomery_entity.working_visualisations = nil
+bloomery_entity.fast_replaceable_group = nil
+bloomery_entity.next_upgrade = nil
+bloomery_entity.water_reflection = nil
 
 -- stone_kiln_entity.icon = stone_kiln_icon_path
 
@@ -43,6 +56,7 @@ stone_kiln_item.place_result = stone_kiln_entity_name
 local bloomery_item = table.deepcopy(data.raw["item"]["stone-furnace"])
 bloomery_item.name = bloomery_entity_name
 bloomery_item.place_result = bloomery_entity_name
+bloomery_item.icon = "__neelays-ferrous-metallurgy__/graphics/icons/bloomery.png"
 
 -- stone kiln recipe
 local stone_kiln_entity_recipe = table.deepcopy(data.raw["recipe"]["stone-furnace"])
@@ -139,7 +153,7 @@ local iron_bloom_recipe = {
     type = "recipe",
     name = "iron-bloom",
     category = "bloomery",
-    energy_required = 3,
+    energy_required = 6,
     ingredients = { { "iron-roasted-ore", 3 } },
     result = "iron-bloom"
 }
