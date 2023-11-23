@@ -20,6 +20,17 @@ stone_kiln_entity.energy_usage = "555.5556kW"
 stone_kiln_entity.energy_source.fuel_category = "wood"
 stone_kiln_entity.crafting_categories = { "kiln" }
 stone_kiln_entity.type = "assembling-machine"
+stone_kiln_entity.icon = "__neelays-ferrous-metallurgy__/graphics/icons/kiln.png"
+stone_kiln_entity.animation = {
+    filename = "__neelays-ferrous-metallurgy__/graphics/entity/kiln.png",
+    width = 64,
+    height = 64,
+    frame_count = 1,
+}
+stone_kiln_entity.working_visualisations = nil
+stone_kiln_entity.fast_replaceable_group = nil
+stone_kiln_entity.next_upgrade = nil
+stone_kiln_entity.water_reflection = nil
 
 -- bloomery entity
 bloomery_entity.name = bloomery_entity_name
@@ -50,7 +61,7 @@ bloomery_entity.water_reflection = nil
 local stone_kiln_item = table.deepcopy(data.raw["item"]["stone-furnace"])
 stone_kiln_item.name = stone_kiln_entity_name
 stone_kiln_item.place_result = stone_kiln_entity_name
--- stone_kiln_item.icon = stone_kiln_icon_path
+stone_kiln_item.icon = "__neelays-ferrous-metallurgy__/graphics/icons/kiln.png"
 
 -- bloomery item
 local bloomery_item = table.deepcopy(data.raw["item"]["stone-furnace"])
@@ -74,15 +85,12 @@ bloomery_entity_recipe.result = bloomery_entity_name
 local charcoal_item = {
     type          = "item",
     name          = "charcoal",
-    icon          = "__neelays-ferrous-metallurgy__/ignore/charcoal.png",
+    icon          = "__neelays-ferrous-metallurgy__/graphics/icons/charcoal.png",
     icon_size     = 64,
     icon_mipmaps  = 4,
     pictures      =
     {
-        { size = 64, filename = "__neelays-ferrous-metallurgy__/ignore/charcoal.png",   scale = 0.25, mipmap_count = 4 },
-        { size = 64, filename = "__neelays-ferrous-metallurgy__/ignore/charcoal-2.png", scale = 0.25, mipmap_count = 4 },
-        { size = 64, filename = "__neelays-ferrous-metallurgy__/ignore/charcoal-3.png", scale = 0.25, mipmap_count = 4 },
-        { size = 64, filename = "__neelays-ferrous-metallurgy__/ignore/charcoal-4.png", scale = 0.25, mipmap_count = 4 }
+        { size = 64, filename = "__neelays-ferrous-metallurgy__/graphics/icons/charcoal.png", scale = 0.25, mipmap_count = 4 }
     },
     fuel_category = "charcoal",
     fuel_value    = "5MJ",
@@ -103,14 +111,32 @@ local charcoal_recipe = {
 local iron_roasted_ore = {
     type = "item",
     name = "iron-roasted-ore",
-    icon = "__neelays-ferrous-metallurgy__/graphics/icons/iron-roasted-ore.png",
+    icon = "__neelays-ferrous-metallurgy__/graphics/icons/iron-roasted-ore/iron-roasted-ore.png",
     icon_size = 64,
     icon_mipmaps = 4,
     pictures =
     {
         {
             size = 64,
-            filename = "__neelays-ferrous-metallurgy__/graphics/icons/iron-roasted-ore.png",
+            filename = "__neelays-ferrous-metallurgy__/graphics/icons/iron-roasted-ore/iron-roasted-ore.png",
+            scale = 0.25,
+            mipmap_count = 4
+        },
+        {
+            size = 64,
+            filename = "__neelays-ferrous-metallurgy__/graphics/icons/iron-roasted-ore/iron-roasted-ore-1.png",
+            scale = 0.25,
+            mipmap_count = 4
+        },
+        {
+            size = 64,
+            filename = "__neelays-ferrous-metallurgy__/graphics/icons/iron-roasted-ore/iron-roasted-ore-2.png",
+            scale = 0.25,
+            mipmap_count = 4
+        },
+        {
+            size = 64,
+            filename = "__neelays-ferrous-metallurgy__/graphics/icons/iron-roasted-ore/iron-roasted-ore-3.png",
             scale = 0.25,
             mipmap_count = 4
         },
